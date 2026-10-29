@@ -21,3 +21,9 @@ python 檔名.py
 ```
 
 範例讀取的資料檔（例如 `students.csv`）放在同一個資料夾，請在該資料夾裡執行。
+
+## 作業
+
+`homework/<單元>/hwN/` 是作業的題目（`README.md`）、起始程式（`starter.py`）與範例（`tests/public.txt`）。
+在線上練習頁面可以直接執行與檢查：<https://LinTzuYu0925.github.io/vibe-coding-python-site/oj/>
+

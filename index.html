@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibe Coding with Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f5f7fa; --text: #172033; --muted-text: #4b5563; --border: #d7dee8;
+    --primary: #2457c5; --soft-blue: #eaf1ff;
+    --font-sans: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Inter, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.6; }
+  main { max-width: 1080px; margin: 0 auto; padding: 40px 16px 64px; }
+  .eyebrow { color: var(--primary); font-weight: 700; letter-spacing: .08em; font-size: 14px; }
+  h1 { font-size: 32px; margin: 4px 0 8px; }
+  .lead { color: var(--muted-text); margin: 0 0 28px; }
+  code { font-family: var(--font-mono); font-size: .9em; }
+  .clone { background: var(--soft-blue); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 32px; }
+  .clone h2 { font-size: 18px; margin: 0 0 6px; }
+  .clone p { margin: 6px 0; color: var(--muted-text); font-size: 15px; }
+  .cmd { display: flex; gap: 8px; align-items: stretch; margin: 8px 0; }
+  .cmd code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font-family: var(--font-mono); font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card { border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; background: var(--bg); display: flex; flex-direction: column; }
+  .num { color: var(--primary); font-weight: 700; font-size: 14px; }
+  .card h2 { font-size: 19px; margin: 2px 0 14px; flex: 1; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn, button { font: inherit; font-size: 14px; border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; background: var(--surface); color: var(--text); text-decoration: none; cursor: pointer; white-space: nowrap; }
+  .btn:hover, button:hover { border-color: var(--primary); }
+  .btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">VIBE CODING WITH PYTHON</div>
+  <h1>課程投影片與範例程式</h1>
+  <p class="lead">點「看投影片」開啟該單元（方向鍵換頁）。投影片上標示 <code>materials/…</code> 的檔名可以直接點開看程式碼。有「線上練習」的單元，可以在瀏覽器裡直接執行 Python 檢查作業（<a href="oj/">全部練習</a>）。</p>
+
+  <section class="clone">
+    <h2>一次下載全部範例</h2>
+    <p>在終端機貼上這行，會在目前資料夾建立 <code>vibe-coding-python-site</code> 資料夾：</p>
+    <div class="cmd"><code>git clone --depth 1 https://github.com/LinTzuYu0925/vibe-coding-python-site.git</code><button type="button" data-copy="git clone --depth 1 https://github.com/LinTzuYu0925/vibe-coding-python-site.git">複製</button></div>
+    <p>之後要取得更新：進入該資料夾，執行</p>
+    <div class="cmd"><code>git pull</code><button type="button" data-copy="git pull">複製</button></div>
+    <p>沒有安裝 git？<a href="https://github.com/LinTzuYu0925/vibe-coding-python-site/archive/refs/heads/main.zip">下載全部範例 (.zip)</a></p>
+  </section>
+
+  <div class="grid">
+    <article class="card">
+      <div class="num">單元 01</div>
+      <h2>AI 核心概念大串聯</h2>
+      <div class="actions">
+        <a class="btn primary" href="01-ai-core-concepts/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/01-ai-core-concepts/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="01-ai-core-concepts/01-ai-core-concepts-materials.zip">下載範例 (.zip)</a>
+        <a class="btn" href="oj/#u01">線上練習</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 02</div>
+      <h2>兩位 AI 隊友：Claude Code 與 Codex</h2>
+      <div class="actions">
+        <a class="btn primary" href="02-claude-code-and-codex/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/02-claude-code-and-codex/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="02-claude-code-and-codex/02-claude-code-and-codex-materials.zip">下載範例 (.zip)</a>
+        <a class="btn" href="oj/#u02">線上練習</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 03</div>
+      <h2>Subagent：把工作交給專員</h2>
+      <div class="actions">
+        <a class="btn primary" href="03-subagents/">看投影片</a>
+        
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 04</div>
+      <h2>開發環境：VS Code、Python 與 AI 助手</h2>
+      <div class="actions">
+        <a class="btn primary" href="04-dev-environment/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/04-dev-environment/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="04-dev-environment/04-dev-environment-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 05</div>
+      <h2>變數、資料型別與運算式</h2>
+      <div class="actions">
+        <a class="btn primary" href="05-variables-types-expressions/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/05-variables-types-expressions/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="05-variables-types-expressions/05-variables-types-expressions-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 06</div>
+      <h2>序列：list、tuple 與 range</h2>
+      <div class="actions">
+        <a class="btn primary" href="06-sequences/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/06-sequences/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="06-sequences/06-sequences-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 07</div>
+      <h2>字典與集合</h2>
+      <div class="actions">
+        <a class="btn primary" href="07-dict-set/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/07-dict-set/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="07-dict-set/07-dict-set-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 08</div>
+      <h2>判斷與迴圈</h2>
+      <div class="actions">
+        <a class="btn primary" href="08-control-flow/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/08-control-flow/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="08-control-flow/08-control-flow-materials.zip">下載範例 (.zip)</a>
+        <a class="btn" href="oj/#u08">線上練習</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 09</div>
+      <h2>函式、作用域與 Clean Code</h2>
+      <div class="actions">
+        <a class="btn primary" href="09-functions-scope-clean-code/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/09-functions-scope-clean-code/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="09-functions-scope-clean-code/09-functions-scope-clean-code-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 10</div>
+      <h2>例外與防禦性程式</h2>
+      <div class="actions">
+        <a class="btn primary" href="10-exceptions/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/10-exceptions/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="10-exceptions/10-exceptions-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 11</div>
+      <h2>模組、套件與環境</h2>
+      <div class="actions">
+        <a class="btn primary" href="11-modules-packages/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/11-modules-packages/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="11-modules-packages/11-modules-packages-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 12</div>
+      <h2>讀寫檔案</h2>
+      <div class="actions">
+        <a class="btn primary" href="12-file-io/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/12-file-io/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="12-file-io/12-file-io-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 13</div>
+      <h2>類別</h2>
+      <div class="actions">
+        <a class="btn primary" href="13-classes/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/13-classes/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="13-classes/13-classes-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+    <article class="card">
+      <div class="num">單元 14</div>
+      <h2>張量</h2>
+      <div class="actions">
+        <a class="btn primary" href="14-tensorflow-tensors/">看投影片</a>
+        <a class="btn" href="https://github.com/LinTzuYu0925/vibe-coding-python-site/tree/main/14-tensorflow-tensors/materials" target="_blank" rel="noopener">範例程式</a>
+        <a class="btn" href="14-tensorflow-tensors/14-tensorflow-tensors-materials.zip">下載範例 (.zip)</a>
+        
+      </div>
+    </article>
+  </div>
+</main>
+<script>
+  for (const b of document.querySelectorAll('[data-copy]')) {
+    b.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = '已複製'; }
+      catch { b.textContent = '請手動選取'; }
+      setTimeout(() => { b.textContent = '複製'; }, 1500);
+    });
+  }
+</script>
+</body>
+</html>

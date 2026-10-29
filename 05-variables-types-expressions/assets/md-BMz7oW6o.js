@@ -1,0 +1,13 @@
+import{L as e,T as t,Y as n,_ as r,b as i,g as a,gt as o,mt as s,x as c}from"./modules/shiki-CTmrkNOW.js";import{nt as l,rt as u}from"./index-FVYHrBZ_.js";import{t as d}from"./slidev/default-06mwPDlH.js";import{t as f}from"./slidev/CodeBlockWrapper-guhy0nOW.js";var p={__name:`slides.web.md__slidev_4`,setup(p){let{$slidev:m,$nav:h,$clicksContext:g,$clicks:_,$page:v,$renderContext:y,$frontmatter:b}=u();return g.setup(),(u,p)=>{let m=f;return e(),r(d,o(t(s(l)(s(b),3))),{default:n(()=>[p[1]||=a(`div`,{class:`eyebrow`},`01 · 變數`,-1),p[2]||=a(`h1`,null,`示範：請 Agent 寫一個程式`,-1),p[3]||=a(`div`,{class:`muted`,style:{"font-size":`18px`}},[i(`在 VS Code 的 Agent 側邊欄輸入這段提示（Prompt，提示詞），`),a(`strong`,null,`先不要執行`),i(`。`)],-1),c(m,{title:``,ranges:[]},{default:n(()=>[...p[0]||=[a(`pre`,{class:`shiki shiki-themes vitesse-dark vitesse-light slidev-code`,style:{"--shiki-dark":`#dbd7caee`,"--shiki-light":`#393a34`,"--shiki-dark-bg":`#121212`,"--shiki-light-bg":`#ffffff`}},[a(`code`,{class:`language-text`},[a(`span`,{class:`line`},[a(`span`,null,`幫我在目前開啟的資料夾建立 grades.py，用 Python 3.12 寫：`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`1. 先用這些變數存資料（名稱照抄）：`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   name = "王小明"、student_id = "S1001"、`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   chinese = 80、english = 72、math = 65、attendance = 0.85`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`2. 再算兩個變數：`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   average = 三科平均，不要四捨五入`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   passed = 平均 ≥ 60 且 出席率 ≥ 0.8`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`3. 最後用 f-string 依序印出四行：`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   王小明（S1001）`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   平均分數：（average 的值）`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   出席率：（attendance 的值）`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`   是否及格：（passed 的值）`)]),i(`
+`),a(`span`,{class:`line`},[a(`span`,null,`只用變數、運算式和 print，不要用函式、迴圈或 input，也不要加其他功能。`)])])],-1)]]),_:1}),p[4]||=a(`div`,{class:`muted`,style:{"font-size":`16px`}},`提示越具體（變數名稱、數值、輸出格式），Agent 產生的程式越接近下一頁。`,-1),p[5]||=a(`div`,{class:`takeaway mt-4`},[i(`兩個動作：`),a(`strong`,null,`① 看程式，在紙上寫下預測的輸出 ② 才執行`),i(`，比對。`)],-1),p[6]||=a(`div`,{class:`src`},[i(`Agent 每次產生的程式不同，下一頁用講師版（`),a(`a`,{href:`https://github.com/LinTzuYu0925/vibe-coding-python-site/blob/main/05-variables-types-expressions/materials/grades.py`,target:`_blank`,rel:`noopener`},`materials/grades.py`),i(`）說明。沒有 Agent 額度：直接打開 grades.py。`)],-1)]),_:1},16)}}};export{p as default};

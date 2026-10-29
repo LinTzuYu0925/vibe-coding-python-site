@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>線上練習</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f5f7fa; --text: #172033; --muted-text: #4b5563; --border: #d7dee8;
+    --primary: #2457c5; --soft-blue: #eaf1ff;
+    --ok: #13795b; --soft-ok: #e6f6ef; --bad: #b42318; --soft-bad: #fdecea; --warn: #9a5b00; --soft-warn: #fff4e0;
+    --font-sans: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Inter, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.6; }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 64px; }
+  a { color: var(--primary); }
+  .eyebrow { color: var(--primary); font-weight: 700; letter-spacing: .08em; font-size: 14px; }
+  h1 { font-size: 28px; margin: 4px 0 8px; }
+  h2 { font-size: 20px; margin: 28px 0 8px; }
+  .lead, .muted { color: var(--muted-text); }
+  code, pre, textarea.code, .mono, input[type=text] { font-family: var(--font-mono); font-size: 14px; font-variant-ligatures: none; }
+  pre { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin: 6px 0; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+  .status { background: var(--soft-warn); color: var(--warn); border-radius: 8px; padding: 6px 12px; font-size: 14px; margin-bottom: 16px; }
+  .status.ready { background: var(--soft-ok); color: var(--ok); }
+  .status.failed { background: var(--soft-bad); color: var(--bad); }
+  .unit { margin-top: 28px; scroll-margin-top: 48px; }
+  .unit h2 { margin: 0 0 10px; }
+  .list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .item { display: block; border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; text-decoration: none; color: var(--text); }
+  .item:hover { border-color: var(--primary); }
+  .tag { display: inline-block; font-size: 13px; font-weight: 700; border-radius: 6px; padding: 0 8px; background: var(--soft-blue); color: var(--primary); }
+  .item strong { display: block; font-size: 18px; margin-top: 4px; }
+  .readme table { border-collapse: collapse; margin: 8px 0; }
+  .readme th, .readme td { border: 1px solid var(--border); padding: 4px 10px; text-align: left; }
+  .readme th { background: var(--surface); }
+  .readme blockquote { margin: 12px 0; padding: 8px 14px; border-left: 4px solid var(--primary); background: var(--soft-blue); }
+  .readme blockquote p { margin: 0; }
+  .readme h1 { display: none; }
+  .panel { border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+  .panel h2 { margin: 0 0 8px; font-size: 18px; }
+  .panel.black { background: var(--surface); }
+  textarea { width: 100%; font: inherit; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; background: #fff; color: var(--text); resize: vertical; }
+  textarea.code { min-height: 260px; tab-size: 4; white-space: pre; }
+  input[type=text] { width: 100%; font-family: var(--font-mono); font-size: 14px; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+  button, .btn { font: inherit; font-size: 14px; border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px; background: var(--surface); color: var(--text); cursor: pointer; text-decoration: none; }
+  button:hover, .btn:hover { border-color: var(--primary); }
+  button.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+  button:disabled { opacity: .5; cursor: wait; }
+  .examples, .cases { width: 100%; border-collapse: collapse; }
+  .examples th, .examples td, .cases th, .cases td { border: 1px solid var(--border); padding: 6px 8px; vertical-align: top; text-align: left; }
+  .examples th, .cases th { background: var(--surface); font-size: 14px; }
+  .examples pre { margin: 0; border: 0; padding: 0; background: none; }
+  .result { border-radius: 8px; padding: 8px 12px; margin: 8px 0; }
+  .result.ok { background: var(--soft-ok); color: var(--ok); }
+  .result.bad { background: var(--soft-bad); color: var(--bad); }
+  .result.note { background: var(--soft-warn); color: var(--warn); }
+  .result pre { color: var(--text); background: #fff; }
+  .result .label { font-size: 13px; color: var(--muted-text); }
+  .scroll { overflow-x: auto; }
+  .scroll .cases { min-width: 620px; }
+  .cases td.got pre { margin: 0; padding: 4px 6px; min-width: 6em; }
+  .cases td.got, .cases td.verdict { min-width: 7em; }
+  .cell-ok { color: var(--ok); font-weight: 700; white-space: nowrap; }
+  .cell-bad { color: var(--bad); font-weight: 700; }
+  .big { font-size: 20px; font-weight: 700; }
+  @media (max-width: 600px) {
+    h1 { font-size: 24px; }
+    .cases th:first-child, .cases td:first-child { width: 2em; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div id="status" class="status">Python 載入中…第一次開啟約需 10～30 秒。</div>
+  <div id="app"></div>
+</main>
+<script src="oj.js"></script>
+</body>
+</html>

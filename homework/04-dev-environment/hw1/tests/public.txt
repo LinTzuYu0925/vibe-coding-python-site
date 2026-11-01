@@ -1,0 +1,7 @@
+--- in
+--- out
+===== 自我介紹 =====
+姓名：王小明
+課程：Vibe Coding with Python
+今天完成：安裝 Python 3.12
+下一步：學變數

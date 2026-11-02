@@ -1,4 +1,4 @@
-# Q7：班級資料表 students.py（不用迴圈與函式）
+# Q7：班級資料表 students.py（資料從 grades.csv 抄進程式，不用迴圈與函式）
 students = [
     {"name": "王小明", "student_id": "S1001", "chinese": 80, "english": 72, "math": 65},
     {"name": "林小華", "student_id": "S1002", "chinese": 92, "english": 88, "math": 95},
@@ -16,7 +16,7 @@ print(f"{first['name']} 的三科平均：{(first['chinese'] + first['english'] 
 
 students.append({"name": "周小傑", "student_id": "S1006", "chinese": 88, "english": 90, "math": 76})
 print(f"新增後人數：{len(students)}")
-print(students[5]["name"])
+print(f"新增的是：{students[-1]['name']}")
 
 clubs = ["羽球", "籃球", "羽球", "桌球", "籃球", "羽球"]
 print(f"社團報名 {len(clubs)} 筆，共 {len(set(clubs))} 種社團")

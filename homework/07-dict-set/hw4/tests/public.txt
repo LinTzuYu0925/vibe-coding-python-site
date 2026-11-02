@@ -1,0 +1,8 @@
+--- in
+apple
+--- out
+蘋果
+--- in
+zebra
+--- out
+查無此字

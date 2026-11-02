@@ -3,7 +3,7 @@ students = [
     {"name": "王小明", "student_id": "S1001", "chinese": 80, "english": 72, "math": 65},
     {"name": "林小華", "student_id": "S1002", "chinese": 92, "english": 88, "math": 95},
     {"name": "陳小美", "student_id": "S1003", "chinese": 65, "english": 70, "math": 58},
-    {"name": "張小強", "student_id": "S1004", "chinese": 55, "english": 60, "math": 72},
+    {"name": "張小強", "student_id": "S1004", "chinese": 45, "english": 50, "math": 52},
     {"name": "李小雅", "student_id": "S1005", "chinese": 78, "english": 85, "math": 90},
 ]
 

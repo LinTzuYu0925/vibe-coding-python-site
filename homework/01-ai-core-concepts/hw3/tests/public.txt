@@ -1,0 +1,8 @@
+--- in
+aaa
+--- out
+強度 弱
+--- in
+Tiger#2026x
+--- out
+強度 強

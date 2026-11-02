@@ -1,0 +1,10 @@
+--- in
+red blue red
+--- out
+單字 3 個，不同 2 個
+最多 red 2 次
+--- in
+one
+--- out
+單字 1 個，不同 1 個
+最多 one 1 次

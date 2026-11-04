@@ -18,7 +18,8 @@ def passed(scores, line=60):
 
 
 if __name__ == "__main__":
-    print("自我測試")
-    print(average([80, 72, 65]))
-    print(average([]))
-    print(passed([80, 59, 60]))
+    # 自我測試：assert 後面的條件不成立，就停下來並出現 AssertionError
+    assert average([80, 90]) == 85
+    assert average([]) is None
+    assert passed([80, 59, 60]) == [80, 60]
+    print("自我測試通過")

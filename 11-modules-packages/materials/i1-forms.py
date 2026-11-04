@@ -5,4 +5,4 @@ from math import sqrt
 print(sqrt(25))
 
 import statistics as st
-print(st.mean([1, 2, 3, 4]))
+print(st.mean([2, 3]))

@@ -1,4 +1,4 @@
-# 老師版：把名字和分數包成一個 Dataset
+# 講師版：把名字和分數包成一個 Dataset
 import ml_stats
 
 

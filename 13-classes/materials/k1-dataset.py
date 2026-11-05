@@ -1,4 +1,6 @@
-# 講師版：把名字和分數包成一個 Dataset
+# 講師版：從 students.csv 讀出名字和分數，包成一個 Dataset
+# 需要 students.csv、ml_stats.py 在同一個資料夾
+import csv
 import ml_stats
 
 
@@ -21,8 +23,14 @@ class Dataset:
         return len(self.names)
 
 
-d = Dataset(["小明", "小華", "阿美", "大雄", "靜香", "技安"],
-            [80, 72, 65, 92, 88, 59])
+names = []
+scores = []
+with open("students.csv", encoding="utf-8", newline="") as f:
+    for row in csv.DictReader(f):
+        names.append(row["name"])
+        scores.append(int(row["score"]))
+
+d = Dataset(names, scores)
 print("平均：", d.average())
 print("及格（60）：", d.passed_names())
 print("及格（80）：", d.passed_names(80))

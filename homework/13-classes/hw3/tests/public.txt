@@ -5,9 +5,14 @@
 90
 結束
 --- out
-人數 2
-平均 75.0
-最高 阿玲 90
+other = Dataset()
+other.add('路人', 1)
+data = Dataset()
+data.add('阿志', 60)
+data.add('阿玲', 90)
+data.count() 回傳 2
+data.average() 回傳 75.0（四捨五入到小數第二位）
+data.best() 回傳 姓名 '阿玲'、分數 90
 --- in
 阿志
 60
@@ -15,10 +20,18 @@
 75
 結束
 --- out
-人數 1
-平均 75.0
-最高 阿志 75
+other = Dataset()
+other.add('路人', 1)
+data = Dataset()
+data.add('阿志', 60)
+data.add('阿志', 75)
+data.count() 回傳 1
+data.average() 回傳 75.0（四捨五入到小數第二位）
+data.best() 回傳 姓名 '阿志'、分數 75
 --- in
 結束
 --- out
-沒有資料
+other = Dataset()
+other.add('路人', 1)
+data = Dataset()
+data.count() 回傳 0

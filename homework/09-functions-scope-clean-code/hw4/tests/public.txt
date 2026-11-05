@@ -1,8 +1,8 @@
 --- in
 95
 --- out
-等第 A
+grade(95) 回傳 'A'
 --- in
 72
 --- out
-等第 C
+grade(72) 回傳 'C'

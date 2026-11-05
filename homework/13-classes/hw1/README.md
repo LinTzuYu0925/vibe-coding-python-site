@@ -4,23 +4,38 @@
 
 ## 規格
 
-- 寫一個類別 `Rectangle`：
-  - `__init__(self, width, height)`：把寬、高存成屬性 `self.width`、`self.height`。
-  - `area(self)`：回傳面積。
-  - `perimeter(self)`：回傳周長。
-  - `is_square(self)`：寬高相等回傳 `True`，否則回傳 `False`。
-- 主程式：輸入兩行，寬和高（正整數），建立一個 `Rectangle`，用它的方法印出三行：
+寫一個類別 `Rectangle`：
 
-```
-面積 12
-周長 14
-不是正方形
+- `__init__(self, width, height)`：把寬、高存成屬性 `self.width`、`self.height`。
+- `area(self)`：**回傳**面積。
+- `perimeter(self)`：**回傳**周長。
+- `is_square(self)`：寬高相等**回傳** `True`，否則回傳 `False`。
+
+只寫類別就好，**不要寫 `input()`，也不要寫主程式**。
+
+## 網頁怎麼檢查
+
+網頁會在你的程式後面接上一段測試程式，像這樣使用你的類別：
+
+```python
+r = Rectangle(3, 4)
+other = Rectangle(5, 5)   # 再建一個，r 不能被它影響
+r.width                   # 應該是 3
+r.area()                  # 應該回傳 12
+r.perimeter()             # 應該回傳 14
+r.is_square()             # 應該回傳 False
 ```
 
-  是正方形時第三行印 `是正方形`。
+測試程式把每個屬性和回傳值印出來，再和「應該印出」比對。所以：
+
+- 方法裡用 `print` 印出答案、沒有 `return`，會被抓到。
+- 方法名稱、屬性名稱要和規格一模一樣。
+- 回傳的是 `True`／`False`，不是文字 `"是正方形"`。
+
+完整的測試程式在下方「看看測試程式」。
 
 ## 你的任務
 
 程式框是空的，從第一行開始自己寫，按「檢查範例」。
 
-會用到單元 13 的 `class`、`__init__`、`self`、方法。網頁只看印出的內容，所以**不用類別也能通過**；但這題要練的是類別，寫完自己檢查：每個方法的第一個參數是不是 `self`？方法裡用的是 `self.width`，還是忘了 `self.`？
+會用到單元 13 的 `class`、`__init__`、`self`、方法。沒通過時，看「你的程式印出」哪一行和「應該印出」不同：測試程式會提示常見的錯，例如忘了寫 `self`、方法裡少寫 `self.`。

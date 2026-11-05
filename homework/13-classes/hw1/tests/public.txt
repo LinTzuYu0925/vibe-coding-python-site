@@ -2,13 +2,21 @@
 3
 4
 --- out
-面積 12
-周長 14
-不是正方形
+r = Rectangle(3, 4)
+other = Rectangle(5, 5)
+r.width 是 3
+r.height 是 4
+r.area() 回傳 12
+r.perimeter() 回傳 14
+r.is_square() 回傳 False
 --- in
 5
 5
 --- out
-面積 25
-周長 20
-是正方形
+r = Rectangle(5, 5)
+other = Rectangle(6, 7)
+r.width 是 5
+r.height 是 5
+r.area() 回傳 25
+r.perimeter() 回傳 20
+r.is_square() 回傳 True
